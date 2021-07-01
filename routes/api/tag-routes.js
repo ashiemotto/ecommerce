@@ -41,7 +41,7 @@ router.post('/',async (req, res) => {
 
 router.put('/:id',async (req, res) => {
   try {
-    const tags = await Tag.update({
+    const tags = await Tag.update(req.body,{
       where: {
         id: req.params.id
       }
